@@ -10,13 +10,13 @@ def frequencies(items):
     else:
 
         for i in range(0,len(items)):
-
-            if frequencies.get(items[i], 'None') == 'None': 
-                frequencies[ items[i] ] = 1
+            item = str(items[i])
+            if frequencies.get(item, 'None') == 'None':
+                frequencies[ item ] = 1
             else:
-                temp = frequencies.get(items[i])
+                temp = frequencies.get(item)
                 temp+=1
-                frequencies[ items[i] ] = temp
+                frequencies[ item ] = temp
 
     return frequencies
 
